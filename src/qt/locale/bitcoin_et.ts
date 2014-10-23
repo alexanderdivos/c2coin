@@ -2236,8 +2236,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9333 or testnet: 20333)</source>
-        <translation>Kuula ühendusi pordil &lt;port&gt; (vaikeväärtus: 9333 või testnet: 20333)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 21333 or testnet: 20333)</source>
+        <translation>Kuula ühendusi pordil &lt;port&gt; (vaikeväärtus: 21333 või testnet: 20333)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2271,8 +2271,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9332 or testnet: 20332)</source>
-        <translation>Kuula JSON-RPC ühendusel seda porti &lt;port&gt; (vaikeväärtus: 9332 või testnet: 20332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 21332 or testnet: 20332)</source>
+        <translation>Kuula JSON-RPC ühendusel seda porti &lt;port&gt; (vaikeväärtus: 21332 või testnet: 20332)</translation>
     </message>
     <message>
         <location line="+37"/>
