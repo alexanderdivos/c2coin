@@ -1,0 +1,9 @@
+Building C2coin
+
+See doc/readme-qt.rst for instructions on building C2coin-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of C2coin.
+
+See doc/build-*.txt for instructions on building c2coind,
+the intended-for-services, no-graphical-interface, reference
+implementation of C2coin.
