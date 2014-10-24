@@ -32,7 +32,7 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 //CB
-uint256 hashGenesisBlock("0x112a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2");
+uint256 hashGenesisBlock("0xd3eff7bddab016c9e23f08bee9fdff8cbc28cc40217255205afcceb33063fe3b");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // C2coin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2750,12 +2750,16 @@ bool InitBlockIndex() {
 
     // Only add the genesis block if not reindexing (in which case we reuse the one already on disk)
     if (!fReindex) {
-        // Genesis Block: ORI LITECOIN
-        // CBlock(hash=12a765e31ffd4059bada, PoW=0000050c34a64b415b6b, ver=1, hashPrevBlock=00000000000000000000, hashMerkleRoot=97ddfbbae6, nTime=1317972665, nBits=1e0ffff0, nNonce=2084524493, vtx=1)
-        //   CTransaction(hash=97ddfbbae6, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-        //     CTxIn(COutPoint(0000000000, -1), coinbase 04ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536)
+        // Genesis Block for C2coin
+        // CBlock(hash=d3eff7bddab016c9e23f08bee9fdff8cbc28cc40217255205afcceb33063fe3b,
+        //   input=01000000000000000000000000000000000000000000000000000000000000000000000056455b35e145d24ceffb871cb29607df7c4fe1f57b588111461664f4e7f070fdfec84854f0ff0f1e451b1000,
+        //   PoW=000001730f06f3537f584acba5b04eda875fd645b6b214b3aa576b067e24eafb, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000,
+        //   hashMerkleRoot=fd70f0e7f46416461181587bf5e14f7cdf0796b21c87fbef4cd245e1355b4556,
+        //   nTime=1414056190, nBits=1e0ffff0, nNonce=1055557, vtx=1)
+        //     CTransaction(hash=fd70f0e7f46416461181587bf5e14f7cdf0796b21c87fbef4cd245e1355b4556, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+        //     CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4e6465727374616e646172642e61742032332f4f63742f32303134204d6564697a696e2d4e6f62656c70726569732066c3bc7220456e746465636b6572206465732047505320696d2047656869726e)
         //     CTxOut(nValue=50.00000000, scriptPubKey=040184710fa689ad5023690c80f3a4)
-        //   vMerkleTree: 97ddfbbae6
+        //     vMerkleTree: fd70f0e7f46416461181587bf5e14f7cdf0796b21c87fbef4cd245e1355b4556
 
         // Genesis block
         const char* pszTimestamp = "derstandard.at 23/Oct/2014 Medizin-Nobelpreis für Entdecker des GPS im Gehirn";
@@ -2772,7 +2776,7 @@ bool InitBlockIndex() {
         block.nVersion = 1;
         block.nTime    = 1414056190;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 0;
+        block.nNonce   = 1055557;
 
         if (fTestNet)
         {
