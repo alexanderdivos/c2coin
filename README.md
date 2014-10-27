@@ -13,7 +13,7 @@ C2coin ("C2C") is a free and decentralized peer-to-peer cryptocurrency that was 
  - Algoritm: scrypt, proof-of-work
  - 2.5 minutes block targets
  - 200 coins per block
- - 240 blocks to retarget difficulty
+ - 240 blocks to retarget difficulty (~10 hours)
  - subsidy halves every 210k blocks (~1 year)
  - ~84 million total coins (~10 years)
 
